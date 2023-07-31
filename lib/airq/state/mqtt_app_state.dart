@@ -28,9 +28,9 @@ class MQTTAppState with ChangeNotifier {
     double pm4 = user.pm4;
     double pm10 = user.pm10;
     _receivedText =
-        "\nTemperature : $temp\n\nPressure : $prs\n\nHumidity : $humid\n\nPm1 : $pm1\n\nPm2_5 : $pm25\n\nPm4 : $pm4\n\nPm10 : $pm10";
+        "\nTemperature : $temp\n\n\nPressure : $prs\n\n\nHumidity : $humid\n\n\nPm1 : $pm1\n\n\nPm2_5 : $pm25\n\n\nPm4 : $pm4\n\n\nPm10 : $pm10";
     //_historyText = '\n$snow\n$_receivedText\n$_historyText\n';
-    _historyText = '                               $snow\n\n   $_receivedText\n';
+    _historyText = '$snow\n\n\n   $_receivedText\n';
     gauge(temp);
     notifyListeners();
   }

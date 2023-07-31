@@ -15,54 +15,6 @@ class NavBar extends StatelessWidget {
       backgroundColor: Colors.black,
       child: ListView(
         children: [
-          // const Divider(),
-          // ListTile(
-          //   leading: const Icon(Icons.air_outlined,color: Color.fromARGB(255, 22, 231, 231),),
-          //   title: const Text('Air Quality',
-          //       style: TextStyle(color: Color.fromARGB(255, 22, 231, 231))),
-          //   onTap: () {
-          //     Navigator.of(context).push(
-          //       MaterialPageRoute(
-          //         builder: (context) =>
-          //             ChangeNotifierProvider<air.MQTTAppState>(
-          //           create: (_) => air.MQTTAppState(),
-          //           child: MQTTViewAir(),
-          //         ),
-          //       ),
-          //     );
-          //   },
-          // ),
-          // ListTile(
-          //   leading: const Icon(Icons.input_outlined,color: Color.fromARGB(255, 22, 231, 231),),
-          //   title: const Text('In & Out ',
-          //       style: TextStyle(color: Color.fromARGB(255, 22, 231, 231))),
-          //   onTap: () {
-          //     Navigator.of(context).push(
-          //       MaterialPageRoute(
-          //         builder: (context) =>
-          //             ChangeNotifierProvider<inout.MQTTAppState>(
-          //           create: (_) => inout.MQTTAppState(),
-          //           child: MQTTViewInout(),
-          //         ),
-          //       ),
-          //     );
-          //   },
-          // ),
-          // ListTile(
-          //   leading: const Icon(Icons.people_outline,color: Color.fromARGB(255, 22, 231, 231),),
-          //   title: const Text('People Count',
-          //       style: TextStyle(color: Color.fromARGB(255, 22, 231, 231))),
-          //   onTap: () {
-          //     Navigator.of(context).push(
-          //       MaterialPageRoute(
-          //         builder: (context) => ChangeNotifierProvider<pc.MQTTAppState>(
-          //           create: (_) => pc.MQTTAppState(),
-          //           child: MQTTViewPc(),
-          //         ),
-          //       ),
-          //     );
-          //   },
-          // ),
           const Divider(),
           ListTile(
             leading: const Icon(Icons.settings,color: Color.fromARGB(255, 22, 231, 231),),

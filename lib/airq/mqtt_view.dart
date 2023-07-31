@@ -35,7 +35,8 @@ class _MQTTViewState extends State<MQTTViewAir> {
             "AIR QUALITY SENSOR",
             style: TextStyle(color: Color.fromARGB(255, 22, 231, 231)),
           ),
-          iconTheme: const IconThemeData(color: Color.fromARGB(255, 4, 233, 221))),
+          iconTheme:
+              const IconThemeData(color: Color.fromARGB(255, 4, 233, 221))),
       drawer: const NavBar(),
       bottomNavigationBar: const BtmNavBar(),
     );
@@ -89,16 +90,41 @@ class _MQTTViewState extends State<MQTTViewAir> {
   Widget _buildScrollableTextWith(String text) {
     return Padding(
       padding: const EdgeInsets.all(20.0),
-      child: Container(
-        width: 400,
-        height: 500,
-        child: SingleChildScrollView(
+      child: Row(children: [
+        SizedBox(
+          height: 500,
+          width: 150,
+          child: Column(
+            mainAxisAlignment: MainAxisAlignment.start,
+            children: [
+            Icon(Icons.access_time_outlined),
+            const Divider(),
+            const Divider(),
+            Icon(Icons.thermostat_outlined),
+            const Divider(),
+            Icon(Icons.access_time_outlined),
+            const Divider(),
+            Icon(Icons.water_outlined),
+            const Divider(),
+            Icon(Icons.access_time_outlined),
+            const Divider(),
+            Icon(Icons.access_time_outlined),
+            const Divider(),
+            Icon(Icons.access_time_outlined),
+            const Divider(),
+            Icon(Icons.access_time_outlined),
+            const Divider(),
+          ]),
+        ),
+        SizedBox(
+          width: 200,
+          height: 500,
           child: Text(
             text,
             style: const TextStyle(color: Color.fromARGB(255, 4, 233, 221)),
           ),
         ),
-      ),
+      ]),
     );
   }
 
