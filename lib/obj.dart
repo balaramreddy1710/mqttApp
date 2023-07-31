@@ -121,7 +121,7 @@ class Inout {
 class Pc {
   late String? mac;
   int? time;
-  late double? cputil;
+  late String? cputil;
   double? ramutil;
   double? cputemp;
   double? diskutil;

@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:provider/provider.dart';
+import 'package:reapp/bnav.dart';
 import 'package:reapp/pc/state/mqtt_app_state.dart';
 import 'package:reapp/pc/mqtt/mqtt_manager.dart';
 import 'package:reapp/nav.dart';
@@ -36,8 +37,9 @@ class _MQTTViewState extends State<MQTTViewPc> {
               color: Color.fromARGB(255, 22, 231, 231),
             ),
           ),
-          iconTheme: IconThemeData(color: Color.fromARGB(255, 4, 233, 221))),
-      drawer: NavBar(),
+          iconTheme: const IconThemeData(color: Color.fromARGB(255, 4, 233, 221))),
+      drawer: const NavBar(),
+      bottomNavigationBar: const BtmNavBar(),
     );
   }
 
@@ -74,7 +76,7 @@ class _MQTTViewState extends State<MQTTViewPc> {
       children: <Widget>[
         Expanded(
           child: Container(
-            color: Color.fromARGB(255, 4, 233, 221),
+            color: const Color.fromARGB(255, 4, 233, 221),
             child: Text(
               status,
               textAlign: TextAlign.center,
@@ -95,7 +97,7 @@ class _MQTTViewState extends State<MQTTViewPc> {
         child: SingleChildScrollView(
           child: Text(
             text,
-            style: TextStyle(color: Color.fromARGB(255, 4, 233, 221)),
+            style: const TextStyle(color: Color.fromARGB(255, 4, 233, 221)),
           ),
         ),
       ),
@@ -115,7 +117,7 @@ class _MQTTViewState extends State<MQTTViewPc> {
               }
             },
             style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 22, 231, 231)), //
+                backgroundColor: const Color.fromARGB(255, 22, 231, 231)), //
             child: const Text(
               'Connect',
               style:
@@ -129,7 +131,7 @@ class _MQTTViewState extends State<MQTTViewPc> {
             onPressed:
                 state == MQTTAppConnectionState.connected ? _disconnect : null,
             style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 22, 231, 231)),
+                backgroundColor: const Color.fromARGB(255, 22, 231, 231)),
             child: const Text('Disconnect',
                 style: TextStyle(
                     fontWeight: FontWeight.bold, color: Colors.black)),

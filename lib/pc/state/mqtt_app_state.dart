@@ -20,7 +20,7 @@ class MQTTAppState with ChangeNotifier {
     var snow = DateFormat().format(now);
 
     String? mac = pc.mac;
-    double? cpu = pc.cputil;
+    String? cpu = pc.cputil;
     String? v = pc.vlvl;
     int? pcount = pc.peoplecount;
 
