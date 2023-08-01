@@ -1,10 +1,5 @@
 import 'dart:io';
 import 'package:flutter/material.dart';
-// import 'package:reapp/airq/state/mqtt_app_state.dart' as air;
-// import 'package:reapp/inout/state/mqtt_app_state.dart' as inout;
-// import 'package:reapp/pc/state/mqtt_app_state.dart' as pc;
-// import 'package:provider/provider.dart';
-
 
 class NavBar extends StatelessWidget {
   const NavBar({super.key});

@@ -33,7 +33,6 @@ dependencies:
   mqtt_client: ^10.0.0
   provider: ^6.0.5
   json_annotation: ^4.8.1
-  syncfusion_flutter_gauges: ^22.1.38
   intl: ^0.18.1
   # The following adds the Cupertino Icons font to your application.
   # Use with the CupertinoIcons class for iOS style icons.

@@ -24,9 +24,9 @@ class MQTTAppState with ChangeNotifier {
     int? balance = inout.balance;
 
     _receivedText =
-        "\nIn_Count : $inn\n\nOut_Count : $out\n\nBalance : $balance";
+        "\n\nIn_Count : $inn\n\n\nOut_Count : $out\n\n\nBalance : $balance";
     //_historyText = '\n$snow\n$_receivedText\n$_historyText\n';
-    _historyText = '                               $snow\n\n   $_receivedText\n';
+    _historyText = '$snow\n\n   $_receivedText\n';
     notifyListeners();
     }
 

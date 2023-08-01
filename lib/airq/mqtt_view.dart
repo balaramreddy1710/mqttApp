@@ -92,31 +92,6 @@ class _MQTTViewState extends State<MQTTViewAir> {
       padding: const EdgeInsets.all(20.0),
       child: Row(children: [
         SizedBox(
-          height: 500,
-          width: 150,
-          child: Column(
-            mainAxisAlignment: MainAxisAlignment.start,
-            children: [
-            Icon(Icons.access_time_outlined),
-            const Divider(),
-            const Divider(),
-            Icon(Icons.thermostat_outlined),
-            const Divider(),
-            Icon(Icons.access_time_outlined),
-            const Divider(),
-            Icon(Icons.water_outlined),
-            const Divider(),
-            Icon(Icons.access_time_outlined),
-            const Divider(),
-            Icon(Icons.access_time_outlined),
-            const Divider(),
-            Icon(Icons.access_time_outlined),
-            const Divider(),
-            Icon(Icons.access_time_outlined),
-            const Divider(),
-          ]),
-        ),
-        SizedBox(
           width: 200,
           height: 500,
           child: Text(
