@@ -92,8 +92,13 @@ class _MQTTViewState extends State<MQTTViewAir> {
       padding: const EdgeInsets.all(20.0),
       child: Row(children: [
         SizedBox(
+<<<<<<< HEAD
           width: 253,
           height: 550,
+=======
+          width: 200,
+          height: 500,
+>>>>>>> 9e6db03cb86fe7e75db70f25f8539b40da02136f
           child: Text(
             text,
             style: const TextStyle(

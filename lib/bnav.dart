@@ -21,43 +21,44 @@ class _BtmNavBarState extends State<BtmNavBar> {
   Widget build(BuildContext context) {
     return BottomNavigationBar(
       type: BottomNavigationBarType.fixed,
-      unselectedItemColor: const Color.fromARGB(255, 4, 233, 221),
       showUnselectedLabels: true,
+      unselectedItemColor: Color.fromARGB(255, 22, 231, 231),
       backgroundColor: Colors.black12,
       iconSize: 30,
       currentIndex: myIndex,
       onTap: (int index) {
         setState(() {
           myIndex = index;
+          if (myIndex == 0) {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => ChangeNotifierProvider<air.MQTTAppState>(
+                  create: (_) => air.MQTTAppState(),
+                  child: MQTTViewAir(),
+                ),
+              ),
+            );
+          } else if (myIndex == 1) {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) =>
+                    ChangeNotifierProvider<inout.MQTTAppState>(
+                  create: (_) => inout.MQTTAppState(),
+                  child: MQTTViewInout(),
+                ),
+              ),
+            );
+          } else if (myIndex == 2) {
+            Navigator.of(context).push(
+              MaterialPageRoute(
+                builder: (context) => ChangeNotifierProvider<pc.MQTTAppState>(
+                  create: (_) => pc.MQTTAppState(),
+                  child: MQTTViewPc(),
+                ),
+              ),
+            );
+          }
         });
-        if (myIndex == 0) {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => ChangeNotifierProvider<air.MQTTAppState>(
-                create: (_) => air.MQTTAppState(),
-                child: MQTTViewAir(),
-              ),
-            ),
-          );
-        } else if (myIndex == 1) {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => ChangeNotifierProvider<inout.MQTTAppState>(
-                create: (_) => inout.MQTTAppState(),
-                child: MQTTViewInout(),
-              ),
-            ),
-          );
-        } else if (myIndex == 2) {
-          Navigator.of(context).push(
-            MaterialPageRoute(
-              builder: (context) => ChangeNotifierProvider<pc.MQTTAppState>(
-                create: (_) => pc.MQTTAppState(),
-                child: MQTTViewPc(),
-              ),
-            ),
-          );
-        }
       },
       items: const <BottomNavigationBarItem>[
         BottomNavigationBarItem(
