@@ -37,7 +37,8 @@ class _MQTTViewState extends State<MQTTViewInout> {
               color: Color.fromARGB(255, 22, 231, 231),
             ),
           ),
-          iconTheme: const IconThemeData(color: Color.fromARGB(255, 4, 233, 221))),
+          iconTheme:
+              const IconThemeData(color: Color.fromARGB(255, 4, 233, 221))),
       drawer: const NavBar(),
       bottomNavigationBar: const BtmNavBar(),
     );
@@ -97,7 +98,10 @@ class _MQTTViewState extends State<MQTTViewInout> {
         child: SingleChildScrollView(
           child: Text(
             text,
-            style: const TextStyle(color: Color.fromARGB(255, 4, 233, 221)),
+            style: const TextStyle(
+                color: Color.fromARGB(255, 4, 233, 221),
+                fontSize: 16,
+                fontWeight: FontWeight.bold),
           ),
         ),
       ),

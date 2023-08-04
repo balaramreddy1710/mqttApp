@@ -1,5 +1,5 @@
-import 'package:mqtt_client/mqtt_client.dart';
 import 'package:reapp/airq/state/mqtt_app_state.dart';
+import 'package:mqtt_client/mqtt_client.dart';
 import 'package:mqtt_client/mqtt_server_client.dart';
 
 class MQTTManager {
@@ -36,7 +36,8 @@ class MQTTManager {
 
     final MqttConnectMessage connMess = MqttConnectMessage()
         .withClientIdentifier(_identifier)
-        .withWillTopic('will topic') // If you set this you must set a will message
+        .withWillTopic(
+            'will topic') // If you set this you must set a will message
         .withWillMessage('My Will message')
         .startClean() // Non persistent session for testing
         .withWillQos(MqttQos.atLeastOnce);
@@ -97,7 +98,8 @@ class MQTTManager {
       final String pt =
           MqttPublishPayload.bytesToStringAsString(recMess.payload.message);
       _currentState.setReceivedText(pt);
-      print('Change notification:: topic is <${c[0].topic}>, payload is <-- $pt -->');
+      print(
+          'Change notification:: topic is <${c[0].topic}>, payload is <-- $pt -->');
       print('');
     });
     print('OnConnected client callback - Client connection was sucessful');

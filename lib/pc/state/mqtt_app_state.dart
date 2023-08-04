@@ -27,9 +27,9 @@ class MQTTAppState with ChangeNotifier {
     _receivedText =
         "\nMAC Address : $mac\n\nCPU Utilization : $cpu\n\nVoltage Level : $v\n\nPeople Count : $pcount";
     //_historyText = '\n$snow\n$_receivedText\n$_historyText\n';
-    _historyText = '                               $snow\n\n   $_receivedText\n';
+    _historyText = '$snow\n\n   $_receivedText\n';
     notifyListeners();
-    }
+  }
 
   void setAppConnectionState(MQTTAppConnectionState state) {
     _appConnectionState = state;
@@ -39,5 +39,3 @@ class MQTTAppState with ChangeNotifier {
   String get getHistoryText => _historyText;
   MQTTAppConnectionState get getAppConnectionState => _appConnectionState;
 }
-
-

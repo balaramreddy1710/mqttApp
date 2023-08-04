@@ -1,7 +1,6 @@
 import 'dart:convert';
 import 'package:flutter/material.dart';
 import 'package:intl/intl.dart';
-import 'package:reapp/gauge.dart';
 import 'package:reapp/obj.dart';
 
 enum MQTTAppConnectionState { connected, disconnected, connecting }
@@ -30,8 +29,7 @@ class MQTTAppState with ChangeNotifier {
     _receivedText =
         "\nTemperature : $temp\n\n\nPressure : $prs\n\n\nHumidity : $humid\n\n\nPm1 : $pm1\n\n\nPm2_5 : $pm25\n\n\nPm4 : $pm4\n\n\nPm10 : $pm10";
     //_historyText = '\n$snow\n$_receivedText\n$_historyText\n';
-    _historyText = '$snow\n\n\n   $_receivedText\n';
-    gauge(temp);
+    _historyText = '$snow\n\n   $_receivedText\n';
     notifyListeners();
   }
 
@@ -43,5 +41,3 @@ class MQTTAppState with ChangeNotifier {
   String get getHistoryText => _historyText;
   MQTTAppConnectionState get getAppConnectionState => _appConnectionState;
 }
-
-
